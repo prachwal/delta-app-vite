@@ -1,0 +1,50 @@
+/* Import theme variables */
+@import url('./themes.css');
+
+.storybook-button {
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3em;
+    font-weight: 700;
+    line-height: 1;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    transition: all 0.3s ease;
+}
+
+/* Primary Button */
+.storybook-button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.storybook-button--primary:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* Secondary Button */
+.storybook-button--secondary {
+    box-shadow: var(--color-shadow) 0px 0px 0px 1px inset;
+    background-color: var(--color-surface);
+    color: var(--color-text-primary);
+}
+
+.storybook-button--secondary:hover {
+    background-color: var(--color-gray-200);
+}
+
+/* Sizes */
+.storybook-button--small {
+    padding: 10px 16px;
+    font-size: 12px;
+}
+
+.storybook-button--medium {
+    padding: 11px 20px;
+    font-size: 14px;
+}
+
+.storybook-button--large {
+    padding: 12px 24px;
+    font-size: 16px;
+}

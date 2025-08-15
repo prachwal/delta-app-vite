@@ -1,0 +1,21 @@
+@import './themes.css';
+@import './button.css';
+@import './header.css';
+@import './page.css';
+
+/* Global styles for Storybook preview */
+.sb-show-main {
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sb-show-main.light {
+    background-color: var(--light-background);
+    color: var(--light-text-primary);
+}
+
+.sb-show-main.dark {
+    background-color: var(--dark-background);
+    color: var(--dark-text-primary);
+}
