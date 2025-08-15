@@ -1,5 +1,6 @@
-import { Button } from './Button';
+
 import './styles/index.css';
+import { UserActions } from './components/UserActions';
 
 export interface User {
     name: string;
@@ -10,9 +11,10 @@ export interface HeaderProps {
     onLogin?: () => void;
     onLogout?: () => void;
     onCreateAccount?: () => void;
+    children?: preact.ComponentChildren;
 }
 
-export const Header = ({ user = null, onLogin, onLogout, onCreateAccount }: HeaderProps) => (
+export const Header = ({ user = null, onLogin, onLogout, onCreateAccount, children }: HeaderProps) => (
     <header>
         <div className="storybook-header">
             <div>
@@ -34,21 +36,8 @@ export const Header = ({ user = null, onLogin, onLogout, onCreateAccount }: Head
                 </svg>
                 <h1>Acme</h1>
             </div>
-            <div>
-                {user ? (
-                    <>
-                        <span className="welcome">
-                            Welcome, <b>{user.name}</b>!
-                        </span>
-                        <Button size="small" onClick={onLogout} label="Log out" />
-                    </>
-                ) : (
-                    <>
-                        <Button size="small" onClick={onLogin} label="Log in" />
-                        <Button primary size="small" onClick={onCreateAccount} label="Sign up" />
-                    </>
-                )}
-            </div>
+            {children && <div className="header-addon-right">{children}</div>}
+            <UserActions user={user} onLogin={onLogin} onLogout={onLogout} onCreateAccount={onCreateAccount} />
         </div>
     </header>
 );

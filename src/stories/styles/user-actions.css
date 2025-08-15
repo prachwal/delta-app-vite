@@ -1,0 +1,144 @@
+/* User Actions Styles - Unified with ThemeToggle (58px height) */
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    box-shadow: var(--color-shadow);
+    height: 58px;
+    /* Exact match with ThemeToggle */
+    box-sizing: border-box;
+    min-width: auto;
+    /* Remove any width restrictions */
+}
+
+.user-actions__logged-in,
+.user-actions__logged-out {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.user-actions__logged-out {
+    gap: 0.25rem;
+}
+
+.user-actions__info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+    color: var(--color-text-primary);
+    height: 100%;
+}
+
+.user-actions__welcome {
+    font-size: 0.875rem;
+    color: var(--color-text-primary);
+    white-space: nowrap;
+}
+
+.user-actions__welcome b {
+    font-weight: 600;
+}
+
+.user-actions__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.375rem;
+    padding: 0 0.75rem;
+    height: 2.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    background-color: var(--color-surface);
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    box-sizing: border-box;
+    white-space: nowrap;
+    /* Prevent text wrapping */
+}
+
+.user-actions__button:hover {
+    background-color: var(--color-gray-200);
+    color: var(--color-text-primary);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.user-actions__button--primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+.user-actions__button--primary:hover {
+    background-color: var(--color-primary-hover);
+    border-color: var(--color-primary-hover);
+    color: var(--color-white);
+}
+
+.user-actions__button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.user-actions__button:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Ensure buttons have proper width based on content */
+.user-actions__logged-out .user-actions__button {
+    width: auto;
+    min-width: fit-content;
+}
+
+.user-actions__logged-in .user-actions__button {
+    width: auto;
+    min-width: fit-content;
+}
+
+/* Dark mode adjustments */
+.dark .user-actions {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+}
+
+.dark .user-actions__button {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+    color: var(--dark-text-secondary);
+}
+
+.dark .user-actions__button:hover {
+    background-color: var(--dark-gray-200);
+    color: var(--dark-text-primary);
+}
+
+.dark .user-actions__button--primary {
+    background-color: var(--dark-primary);
+    color: var(--dark-white);
+    border-color: var(--dark-primary);
+}
+
+.dark .user-actions__button--primary:hover {
+    background-color: var(--dark-primary-hover);
+    border-color: var(--dark-primary-hover);
+}
+
+.dark .user-actions__welcome {
+    color: var(--dark-text-primary);
+}
+
+.dark .user-actions__info {
+    color: var(--dark-text-primary);
+}

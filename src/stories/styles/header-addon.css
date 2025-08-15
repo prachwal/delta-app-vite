@@ -1,0 +1,9 @@
+/* Wyrównanie dodatku w Header do prawej */
+.header-addon-right {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+    min-width: 0;
+}

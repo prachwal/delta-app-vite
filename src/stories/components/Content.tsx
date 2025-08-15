@@ -1,10 +1,19 @@
-import React from 'react';
 
 export interface ContentProps {
     className?: string;
 }
 
-export const Content: React.FC<ContentProps> = ({ className }) => {
+export interface TipProps {
+    children?: preact.ComponentChildren;
+}
+
+export const Tip = ({ children }: TipProps) => (
+    <div className="tip-wrapper">
+        <span className="tip">Tip</span> {children}
+    </div>
+);
+
+export const Content = ({ className }: ContentProps) => {
     return (
         <section className={className}>
             <h2>Pages in Storybook</h2>
@@ -38,11 +47,11 @@ export const Content: React.FC<ContentProps> = ({ className }) => {
                 . Read more in the{' '}
                 <a href="https://storybook.js.org/docs" target="_blank" rel="noopener noreferrer">
                     docs
-                </a>
+                </a>{''}
                 .
             </p>
-            <div className="tip-wrapper">
-                <span className="tip">Tip</span> Adjust the width of the canvas with the{' '}
+            <Tip>
+                Adjust the width of the canvas with the{' '}
                 <svg width="10" height="10" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" fillRule="evenodd">
                         <path
@@ -53,7 +62,7 @@ export const Content: React.FC<ContentProps> = ({ className }) => {
                     </g>
                 </svg>
                 Viewports addon in the toolbar
-            </div>
+            </Tip>
         </section>
     );
 };

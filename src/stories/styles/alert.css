@@ -1,0 +1,193 @@
+/* Professional Alert Component Styles */
+:root {
+    --alert-info-bg: #e3f2fd;
+    --alert-info-border: #2196f3;
+    --alert-info-color: #1565c0;
+
+    --alert-success-bg: #e8f5e8;
+    --alert-success-border: #4caf50;
+    --alert-success-color: #2e7d32;
+
+    --alert-warning-bg: #fff3e0;
+    --alert-warning-border: #ff9800;
+    --alert-warning-color: #e65100;
+
+    --alert-error-bg: #ffebee;
+    --alert-error-border: #f44336;
+    --alert-error-color: #c62828;
+}
+
+/* Dark theme variables */
+.dark {
+    --alert-info-bg: rgba(33, 150, 243, 0.1);
+    --alert-info-border: #2196f3;
+    --alert-info-color: #90caf9;
+
+    --alert-success-bg: rgba(76, 175, 80, 0.1);
+    --alert-success-border: #4caf50;
+    --alert-success-color: #81c784;
+
+    --alert-warning-bg: rgba(255, 152, 0, 0.1);
+    --alert-warning-border: #ff9800;
+    --alert-warning-color: #ffb74d;
+
+    --alert-error-bg: rgba(244, 67, 54, 0.1);
+    --alert-error-border: #f44336;
+    --alert-error-color: #e57373;
+}
+
+/* Base alert styles */
+.alert {
+    margin: 1rem 0;
+    padding: 1rem 1.25rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.alert--info {
+    background-color: var(--alert-info-bg);
+    border-color: var(--alert-info-border);
+    color: var(--alert-info-color);
+}
+
+.alert--success {
+    background-color: var(--alert-success-bg);
+    border-color: var(--alert-success-border);
+    color: var(--alert-success-color);
+}
+
+.alert--warning {
+    background-color: var(--alert-warning-bg);
+    border-color: var(--alert-warning-border);
+    color: var(--alert-warning-color);
+}
+
+.alert--error {
+    background-color: var(--alert-error-bg);
+    border-color: var(--alert-error-border);
+    color: var(--alert-error-color);
+}
+
+.alert__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.alert__icon-wrapper {
+    flex-shrink: 0;
+    margin-top: 0.125rem;
+}
+
+.alert__icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    flex-shrink: 0;
+}
+
+.alert__message {
+    flex: 1;
+    margin: 0;
+}
+
+.alert__close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    margin: -0.25rem -0.5rem -0.25rem 0;
+    color: currentColor;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+    flex-shrink: 0;
+}
+
+.alert__close:hover {
+    opacity: 1;
+}
+
+.alert__close:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 0.25rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .alert {
+        padding: 0.875rem 1rem;
+        font-size: 0.8125rem;
+    }
+
+    .alert__icon {
+        width: 1.125rem;
+        height: 1.125rem;
+    }
+}
+
+/* Legacy styles for backward compatibility */
+.alert-wrapper {
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+    background: var(--color-surface);
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.alert-wrapper .alert {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 0.85rem;
+    padding: 0.25em 0.75em;
+    border-radius: 0.5em;
+    margin-right: 0.75em;
+    background: var(--alert-color, var(--color-primary));
+    color: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: background 0.2s;
+}
+
+.dark .alert-wrapper .alert {
+    color: #fff;
+    background: var(--alert-color, var(--color-primary));
+}
+
+.light .alert-wrapper .alert {
+    color: #fff;
+    background: var(--alert-color, var(--color-primary));
+}

@@ -17,11 +17,12 @@ export const Page = () => {
                     onLogin={() => setUser({ name: 'Jane Doe' })}
                     onLogout={() => setUser(undefined)}
                     onCreateAccount={() => setUser({ name: 'Jane Doe' })}
-                />
+                >
+                    <div className="header-addon-right">
+                        <ThemeToggle />
+                    </div>
+                </Header>
 
-                <div style={{ padding: '1rem', display: 'flex', justifyContent: 'flex-end' }}>
-                    <ThemeToggle />
-                </div>
 
                 <Content className="storybook-page" />
             </article>

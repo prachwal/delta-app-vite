@@ -3,6 +3,8 @@
 @import './header.css';
 @import './page.css';
 @import './theme-toggle.css';
+@import './alert.css';
+@import './header-addon.css';
 
 /* Global styles for Storybook preview */
 .sb-show-main {
