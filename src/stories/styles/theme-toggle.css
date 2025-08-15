@@ -1,0 +1,67 @@
+/* Theme Toggle Styles */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 0.5rem;
+    box-shadow: var(--color-shadow);
+}
+
+.theme-toggle__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--color-border);
+    border-radius: 0.375rem;
+    background-color: var(--color-surface);
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.theme-toggle__button:hover {
+    background-color: var(--color-gray-200);
+    color: var(--color-text-primary);
+}
+
+.theme-toggle__button.active {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary), 0 2px 8px rgba(0, 0, 0, 0.15);
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.theme-toggle__current {
+    font-size: 0.875rem;
+    color: var(--color-text-secondary);
+    margin-left: 0.5rem;
+    white-space: nowrap;
+}
+
+/* Dark mode adjustments */
+.dark .theme-toggle {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+}
+
+.dark .theme-toggle__button {
+    background-color: var(--dark-surface);
+    border-color: var(--dark-border);
+    color: var(--dark-text-secondary);
+}
+
+.dark .theme-toggle__button:hover {
+    background-color: var(--dark-gray-200);
+    color: var(--dark-text-primary);
+}
+
+.dark .theme-toggle__current {
+    color: var(--dark-text-secondary);
+}

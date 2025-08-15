@@ -1,0 +1,25 @@
+/* Ensure body and html support theme switching */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Default theme (light) */
+html {
+    background-color: var(--color-background, #ffffff);
+    color: var(--color-text-primary, #212529);
+}
+
+/* Dark theme support */
+html.dark {
+    background-color: var(--color-background, #111827);
+    color: var(--color-text-primary, #f9fafb);
+}
+
+/* Ensure app container fills available space */
+#app {
+    min-height: 100vh;
+}

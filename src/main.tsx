@@ -1,5 +1,5 @@
-import { render } from 'preact'
-import './index.css'
-import { App } from './app.tsx'
+import { render } from 'preact';
+import { Page } from './stories/Page.tsx';
+import './theme-base.css';
 
-render(<App />, document.getElementById('app')!)
+render(<Page />, document.getElementById('app')!);

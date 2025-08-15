@@ -2,20 +2,21 @@
 @import './button.css';
 @import './header.css';
 @import './page.css';
+@import './theme-toggle.css';
 
 /* Global styles for Storybook preview */
 .sb-show-main {
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
+    background-color: var(--color-background, #ffffff);
+    color: var(--color-text-primary, #212529);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sb-show-main.light {
-    background-color: var(--light-background);
-    color: var(--light-text-primary);
+    background-color: #ffffff;
+    color: #212529;
 }
 
 .sb-show-main.dark {
-    background-color: var(--dark-background);
-    color: var(--dark-text-primary);
+    background-color: #111827;
+    color: #f9fafb;
 }
